@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  Alert,
-  Button,
-  Form,
-  FormGroup,
-  Input,
-  Label,
-} from "reactstrap";
+import { Alert, Button, Form, FormGroup, Input, Label } from "reactstrap";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { submitChicken } from "../utils/api";
 
@@ -35,9 +28,19 @@ function SubmitChicken() {
   }
 
   return (
-    <div>
-      
-      <h2 className="ms-2 mt-5">Submit a Chicken</h2>
+    <div
+      style={{
+        backgroundImage: `url("https://static.displate.com/280x392/displate/2022-12-11/919c68aa57f7c4d486488829af4b2d6e_1d0354edc95336b5c1dce8b8308540bd.jpg")`,
+        backgroundRepeat: "repeat repeat",
+        backgroundSize: "cover", 
+      }}
+    >
+      <h2
+        className="ms-2 mt-5"
+        style={{ color: "red", lineHeight: 10, padding: 20,  }}
+      >
+        Create Chckn Profile
+      </h2>
       {loading ? (
         <LoadingSpinner />
       ) : (
@@ -75,7 +78,7 @@ function SubmitChicken() {
                 }
               />
             </FormGroup>
-            <Button color="primary" size="lg" onClick={submitForm}>
+            <Button color="Alert" size="lrg" onClick={submitForm}>
               Submit 🐔
             </Button>
           </Form>
