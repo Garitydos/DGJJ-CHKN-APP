@@ -14,7 +14,7 @@ function App() {
      <Routes>
       <Route path="/" element={<RateChickens />} />
       <Route path="/submit" element={<SubmitChicken />} />
-      <Route path="/view" element={<ViewChickens />} />
+      {/* <Route path="/view" element={<ViewChickens />} /> */}
     </Routes>
     </>
   )
