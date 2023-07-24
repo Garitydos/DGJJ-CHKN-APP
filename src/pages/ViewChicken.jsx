@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Alert, Button, Table } from "reactstrap";
 import { deleteChicken, getAllChickens } from "../utils/api";
-import LoadingSpinner from "../../../chikntender_fake/src/components/LoadingSpinner";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function ViewChicken() {
   const [loading, setLoading] = useState(false);
