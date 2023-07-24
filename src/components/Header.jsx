@@ -50,7 +50,7 @@ function Header() {
                 Settings?
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem tag={Link} to="/">Ratings</DropdownItem>
+                <DropdownItem tag={Link} to="/submit">Submit!</DropdownItem>
                 <DropdownItem tag={Link} to="/">Profiles</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>Close</DropdownItem>
