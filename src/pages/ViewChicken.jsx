@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Alert, Button, Table} from "reactstrap"
-import { deleteChicken, getAllChickens } from '../../../chikntender_fake/src/utils/api';
+import { deleteChicken, getAllChickens } from '../utils/api';
 
 
 export default function ViewChicken() {
@@ -34,8 +34,33 @@ export default function ViewChicken() {
 
   return (
     <div>
-        <h2></h2>
-        
+        <h2>All Chickens{" "}<Button size='sm' color='danger' onClick={()=> navigate("/submit")}></Button></h2>
+        <>
+        <Table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>👍</th>
+                <th>👎</th>
+                <th>Total Score</th>
+                <th>Fry Chicken</th>
+            </tr>
+        </thead>
+        <tbdoy>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbdoy>
+        </Table>
+        </>
     </div>
   )
 }

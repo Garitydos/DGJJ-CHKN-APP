@@ -2,7 +2,7 @@ import React from 'react';
 import _ from "lodash";
 import Header from "../components/Header";
 import { useEffect, useState } from 'react';
-import { downdootChicken, getAllChickens, updootChicken } from '../../../chikntender_fake/src/utils/api';
+import { downdootChicken, getAllChickens, updootChicken } from '../utils/api';
 import LoadingSpinner from '../../../chikntender_fake/src/components/LoadingSpinner';
 
 export default function RateChickens() {
