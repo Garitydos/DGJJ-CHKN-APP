@@ -66,13 +66,8 @@ export default function RateChickens() {
               <h2 className="mt-3 d-flex align-items-baseline">
                 {chicken.name}
                 <small className="text-sm text-muted ms-3 d-flex align-items-center">
-<<<<<<< HEAD
                   {chicken.location}
                   {console.log}
-=======
-                  <FaMapMarkerAlt style={{ width: 20 }} className="me-2" />
-                  {chicken.location}
->>>>>>> 0611820bf70782d6f876298f1574a5c776648e7b
                 </small>
               </h2>
               <h6>Description</h6>
