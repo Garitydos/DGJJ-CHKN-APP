@@ -13,6 +13,7 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +49,7 @@ function Header() {
               <DropdownToggle nav caret>
                 Settings?
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem>Ratings</DropdownItem>
                 <DropdownItem>Profiles</DropdownItem>
                 <DropdownItem divider />
