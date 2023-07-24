@@ -50,13 +50,14 @@ export default function RateChickens() {
           <Row>
             <div className="p-2 bg-light d-flex align-items-center justify-content-center">
               <div className="chikn-img d-flex align-items-center justify-content-center">
-                <img src={chicken.imgurl} />
+                <img src={chicken.imgur1} />
               </div>
             </div>
             <div style={{ height: "250px" }}>
               <h2 className="mt-3 d-flex align-items-baseline">
                 {chicken.name}
                 <small className="text-sm text-muted ms-3 d-flex align-items-center">
+                  <FaMapMarkerAlt style={{ width: 20 }} className="me-2" />
                   {chicken.location}
                 </small>
               </h2>
@@ -86,7 +87,7 @@ export default function RateChickens() {
           </Row>
         </Container>
       ) : (
-        "Plus de poulets à évaluer!"
+        "Il n'y a plus de poulets à évaluer!"
       )}
     </div>
   );

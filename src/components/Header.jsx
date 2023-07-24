@@ -47,18 +47,17 @@ function Header() {
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Settings?
+                Fixin's
               </DropdownToggle>
               <DropdownMenu end>
                 <DropdownItem tag={Link} to="/submit">Submit!</DropdownItem>
-                <DropdownItem tag={Link} to="/">Profiles</DropdownItem>
-                <DropdownItem href="https://www.google.com/search?channel=fenc&client=firefox-b-1-d&q=buy+chicken">Buy Chicken</DropdownItem>
+                <DropdownItem href="https://www.google.com/search?channel=fenc&client=firefox-b-1-d&q=buy+chicken" target="_blank">Buy Chicken</DropdownItem>
+                <DropdownItem href="https://www.youtube.com/watch?v=xS1BYUknI6U" target="_blank">Cluck Cluck, motherf-</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>Close</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Cluck Cluck, motherf-</NavbarText>
         </Collapse>
       </Navbar>
     </div>
