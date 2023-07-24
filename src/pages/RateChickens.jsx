@@ -6,8 +6,8 @@ import {
   downdootChicken,
   getAllChickens,
   updootChicken,
-} from "../../../chikntender_fake/src/utils/api";
-import LoadingSpinner from "../../../chikntender_fake/src/components/LoadingSpinner";
+} from "../utils/api";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function RateChickens() {
   const [chickens, setChickens] = useState([]);
