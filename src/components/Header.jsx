@@ -11,7 +11,6 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
 } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
@@ -23,7 +22,7 @@ function Header() {
   return (
     <div>
       <Navbar className="p-3 mb-2 bg-warning text-white">
-        <NavbarBrand /*nav link here*/  >   
+        <NavbarBrand>   
     Chimken Brefkst <span></span>
         <img className="square bg-primary rounded-circle"
         alt="logo"
@@ -38,7 +37,9 @@ function Header() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink tag={Link} to="/">Nav69</NavLink>
+              <NavLink tag={Link} to="/view">
+                Looky-Loos
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/">
