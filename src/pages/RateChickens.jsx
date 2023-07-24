@@ -3,12 +3,21 @@ import { useEffect, useState } from "react";
 import { Alert, Button, Container, Row } from "reactstrap";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { downdootChicken, getAllChickens, updootChicken } from "../utils/api";
+import useSound from "use-sound";
+import Panic from "../assets/Panic.mp3";
+import Content from "../assets/Content.mp3";
 
 export default function RateChickens() {
   const [chickens, setChickens] = useState([]);
   const [loading, setLoading] = useState(false);
   const [index, setIndex] = useState(0);
   const [errorMsg, setErrorMsg] = useState(null);
+  const UpDootButton = () => {
+    const [play] = useSound(Panic);
+  };
+  const DownDootButton = () => {
+    const [play] = useSound(Content);
+  };
 
   const chicken = chickens[index];
 
@@ -57,7 +66,8 @@ export default function RateChickens() {
               <h2 className="mt-3 d-flex align-items-baseline">
                 {chicken.name}
                 <small className="text-sm text-muted ms-3 d-flex align-items-center">
-                  {chicken.location}{console.log}
+                  {chicken.location}
+                  {console.log}
                 </small>
               </h2>
               <h6>Description</h6>
@@ -69,16 +79,17 @@ export default function RateChickens() {
                 color="primary"
                 size="lg"
                 className="shadow-sm"
-                onClick={handleDowndoot}
+                onClick={(handleDowndoot, DownDootButton)}
               >
                 🧊 Frozen Nuggs 🧊
               </Button>
+
               <Button
                 outline
                 color="danger"
                 size="lg"
                 className="shadow-sm"
-                onClick={handleUpdoot}
+                onClick={(handleUpdoot, UpDootButton)}
               >
                 🔥 Nashville Hot 🔥
               </Button>
