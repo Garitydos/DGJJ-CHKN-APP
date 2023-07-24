@@ -52,6 +52,7 @@ function Header() {
               <DropdownMenu end>
                 <DropdownItem tag={Link} to="/submit">Submit!</DropdownItem>
                 <DropdownItem tag={Link} to="/">Profiles</DropdownItem>
+                <DropdownItem href="https://www.google.com/search?channel=fenc&client=firefox-b-1-d&q=buy+chicken">Buy Chicken</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>Close</DropdownItem>
               </DropdownMenu>
