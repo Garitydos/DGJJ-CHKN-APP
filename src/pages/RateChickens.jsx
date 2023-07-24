@@ -12,12 +12,8 @@ export default function RateChickens() {
   const [loading, setLoading] = useState(false);
   const [index, setIndex] = useState(0);
   const [errorMsg, setErrorMsg] = useState(null);
-  const UpDootButton = () => {
-    const [play] = useSound(Panic);
-  };
-  const DownDootButton = () => {
-    const [play] = useSound(Content);
-  };
+  const [play1] = useSound(Panic);
+  const [play2] = useSound(Content);
 
   const chicken = chickens[index];
 
@@ -33,6 +29,7 @@ export default function RateChickens() {
   useEffect(getNewChicken, []);
 
   function handleUpdoot() {
+    play2();
     setErrorMsg(null);
     setLoading(true);
     updootChicken(chicken.id)
@@ -42,6 +39,7 @@ export default function RateChickens() {
   }
 
   function handleDowndoot() {
+    play1();
     setErrorMsg(null);
     setLoading(true);
     downdootChicken(chicken.id)
@@ -79,7 +77,7 @@ export default function RateChickens() {
                 color="primary"
                 size="lg"
                 className="shadow-sm"
-                onClick={(handleDowndoot, DownDootButton)}
+                onClick={handleDowndoot}
               >
                 🧊 Frozen Nuggs 🧊
               </Button>
@@ -89,8 +87,7 @@ export default function RateChickens() {
                 color="danger"
                 size="lg"
                 className="shadow-sm"
-                onClick={(handleUpdoot, UpDootButton)}
-              >
+                onClick={handleUpdoot}            >
                 🔥 Nashville Hot 🔥
               </Button>
             </div>
