@@ -38,10 +38,10 @@ function Header() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Nav69</NavLink>
+              <NavLink tag={Link} to="/">Nav69</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink >
+              <NavLink tag={Link} to="/">
                 Chimken
               </NavLink>
             </NavItem>
@@ -50,8 +50,8 @@ function Header() {
                 Settings?
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem>Ratings</DropdownItem>
-                <DropdownItem>Profiles</DropdownItem>
+                <DropdownItem tag={Link} to="/">Ratings</DropdownItem>
+                <DropdownItem tag={Link} to="/">Profiles</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>Close</DropdownItem>
               </DropdownMenu>
