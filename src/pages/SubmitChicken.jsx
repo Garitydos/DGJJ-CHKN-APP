@@ -8,7 +8,6 @@ import {
   Input,
   Label,
 } from "reactstrap";
-import Header from "../components/Header";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { submitChicken } from "../utils/api";
 
