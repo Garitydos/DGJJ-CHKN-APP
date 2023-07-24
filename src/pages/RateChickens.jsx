@@ -57,7 +57,7 @@ export default function RateChickens() {
           <Row>
             <div className="p-2 bg-light d-flex align-items-center justify-content-center">
               <div className="chikn-img d-flex align-items-center justify-content-center">
-                <img src={chicken.imgur1} />
+                <img src={chicken.imgurl} />
               </div>
             </div>
             <div style={{ height: "250px" }}>
