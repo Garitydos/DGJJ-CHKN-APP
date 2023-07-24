@@ -1,13 +1,9 @@
-import React from "react";
 import _ from "lodash";
-import Header from "../components/Header";
 import { useEffect, useState } from "react";
-import {
-  downdootChicken,
-  getAllChickens,
-  updootChicken,
-} from "../utils/api";
+import { Alert, Button, Container, Row } from "reactstrap";
+import Header from "../components/Header";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { downdootChicken, getAllChickens, updootChicken } from "../utils/api";
 
 export default function RateChickens() {
   const [chickens, setChickens] = useState([]);
