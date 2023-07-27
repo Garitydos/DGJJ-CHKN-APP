@@ -23,7 +23,7 @@ function Header() {
     <div>
       <Navbar className="p-3 mb-2 bg-warning text-white">
         <NavbarBrand>   
-    Chimken Brefkst <span></span>
+    Chimken Linger <span></span>
         <img className="square bg-primary rounded-circle"
         alt="logo"
         src="https://static.vecteezy.com/system/resources/previews/008/441/867/original/crispy-fried-chicken-leg-illustration-flat-icon-illustration-design-fast-food-fried-chicken-leg-flat-design-vector.jpg"

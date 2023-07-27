@@ -6,6 +6,7 @@ import { downdootChicken, getAllChickens, updootChicken } from "../utils/api";
 import useSound from "use-sound";
 import Panic from "../assets/Panic.mp3";
 import Content from "../assets/Content.mp3";
+import linger from "../assets/linger.mp3";
 
 export default function RateChickens() {
   const [chickens, setChickens] = useState([]);
@@ -14,6 +15,8 @@ export default function RateChickens() {
   const [errorMsg, setErrorMsg] = useState(null);
   const [play1] = useSound(Panic);
   const [play2] = useSound(Content);
+  const [play3] = useSound(linger)
+  // , autoplay, loop, hidden)
 
   const chicken = chickens[index];
 
@@ -29,7 +32,7 @@ export default function RateChickens() {
   useEffect(getNewChicken, []);
 
   function handleUpdoot() {
-    play2();
+    play2(); play3();
     setErrorMsg(null);
     setLoading(true);
     updootChicken(chicken.id)
@@ -39,7 +42,7 @@ export default function RateChickens() {
   }
 
   function handleDowndoot() {
-    play1();
+    play1(); play3();
     setErrorMsg(null);
     setLoading(true);
     downdootChicken(chicken.id)
@@ -77,7 +80,7 @@ export default function RateChickens() {
                 color="primary"
                 size="lg"
                 className="shadow-sm"
-                onClick={handleDowndoot}
+                onClick={handleDowndoot} 
               >
                 🧊 Frozen Nuggs 🧊
               </Button>
